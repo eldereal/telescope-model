@@ -1,4 +1,5 @@
 include <dovetail.scad>
+include <MCAD/gears.scad>
 
 color([119/256, 98/256, 140/256]){
     dovetail();
@@ -111,8 +112,9 @@ color([128/255, 128/255, 128/255]){
     {        
         translate([0,120,0]){
            nut();
-           translate([0, 10, 0]) rotate([90, 0, 0])
-                cylinder(r=15, h=5, $fn=100);
+           translate([0, 20, 0]) rotate([90, 0, 0])
+                // cylinder(r=15, h=5, $fn=100);
+                gear(30);
         }
     }
 
